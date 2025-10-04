@@ -9,7 +9,7 @@ CORS(app)  # Allow requests from React frontend
 # Load the trained model
 model = joblib.load("gold_price_model.pkl")
 
-@app.route("/predict", methods=["POST"])
+@app.route("/", methods=["POST"])
 def predict():
     try:
         # Expecting JSON input: {"features": [x1, x2, x3, x4]}
